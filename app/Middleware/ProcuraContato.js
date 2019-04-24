@@ -19,7 +19,6 @@ class ProcuraContato {
     },
     next
   ) {
-    console.log(id);
     const contato = await Contato.find(id);
 
     if (!contato) {
@@ -30,8 +29,6 @@ class ProcuraContato {
     }
 
     request.body.contato = contato;
-
-    console.log(request.body);
 
     await next();
   }
